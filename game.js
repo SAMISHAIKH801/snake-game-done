@@ -346,3 +346,12 @@ bottomBtn.addEventListener('click', function() {
         down.play();
     }
 });
+
+
+// Get the restart button
+const restartBtn = document.querySelector('.rs-btn');
+
+// Add click event listener to the restart button
+restartBtn.addEventListener('click', function() {
+    restartGame();
+});

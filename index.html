@@ -28,6 +28,34 @@ button{
     font-size: 2.5rem;
 }
 
+.restart{
+    position: relative;
+    top: 619px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.restart .rs-btn{
+    font-size: 20px;
+    border-radius: 14px;
+    padding: 10px;
+    background: #28ff28;
+    color: white;
+}     
+
+/* .restart button{
+    position: relative;
+    top: 624px;
+    left: 791px;
+    font-size: 20px;
+    border-radius: 14px;
+    padding: 10px;
+    background: #28ff28;
+    color: white;
+} */
+
+
 
 @media (max-width: 425px){
     h1{
@@ -41,7 +69,7 @@ button{
     width: 100%;
     }
     .arrow{
-   margin-top: -126px;
+   margin-top: -118px;
     }
     button{
         font-size: 1.5rem;
@@ -69,10 +97,20 @@ button{
          bottom: -16px; */
          margin: -25px 24px 59px -35px
     }
+    .restart{
+        margin-top: -59px;
+    }
 }
 @media (max-width: 375px){
     .arrow{
         margin-top: -166px;
+    }
+}
+
+@media (max-width: 320px){
+    .arrow{
+        margin-top: -205px;
+
     }
 }
 
@@ -100,6 +138,9 @@ button{
       <button class="bottom-btn">
         <i class="bi bi-arrow-down"></i>
       </button>                    
+    </div>
+    <div class="restart">
+        <button class="rs-btn">Restart</button>
     </div>
     <script src="game.js"></script>
 </body>
