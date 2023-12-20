@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snake Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <style>
         h1{
             text-align: center;
@@ -15,13 +16,91 @@
             left: 30%;
             box-shadow: 5px 5px 6px rgba(0,0,0,0.2);
         }
+        .arrow{
+    position: relative;
+    top: 619px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}        
+button{
+    font-size: 2.5rem;
+}
+
+
+@media (max-width: 425px){
+    h1{
+        font-size: 15px;
+  
+    text-align: center;
+    margin: 3px;
+    }
+    #canvas{
+        left: -1px;
+    width: 100%;
+    }
+    .arrow{
+   margin-top: -126px;
+    }
+    button{
+        font-size: 1.5rem;
+    }
+    .top-btn{
+         /* position: relative;
+         top: 437px; */
+         /* margin-top: 444px; */
+         margin: -237px -80px -20px 29px
+    }
+    .right-btn{
+        /* position: relative; */
+         /* right: 142px;
+         bottom: 17px; */
+         margin: -46px -74px 104px 77px;
+    }
+    .left-btn{
+        /* position: relative;
+         left: 142px;
+         bottom: 17px; */
+         margin: -39px 34px 111px -44px;
+    }
+    .bottom-btn{
+        /* position: relative;
+         bottom: -16px; */
+         margin: -25px 24px 59px -35px
+    }
+}
+@media (max-width: 375px){
+    .arrow{
+        margin-top: -166px;
+    }
+}
+
     </style>
 
 </head>
 <body>
     
     <h1>Snake Game</h1>
-    <canvas width="608" height="608" id="canvas"></canvas>
+    <!-- <div> -->
+
+        <canvas width="608" height="608" id="canvas"></canvas>
+    <!-- </div> -->
+    <div class="arrow">
+
+      <button class="top-btn">
+        <i class="bi bi-arrow-up"></i>
+      </button>                    
+      <button class="right-btn">
+        <i class="bi bi-arrow-right"></i>
+      </button>                    
+      <button class="left-btn">
+        <i class="bi bi-arrow-left"></i>
+      </button>                    
+      <button class="bottom-btn">
+        <i class="bi bi-arrow-down"></i>
+      </button>                    
+    </div>
     <script src="game.js"></script>
 </body>
 </html>

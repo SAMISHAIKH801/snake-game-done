@@ -294,9 +294,9 @@ document.addEventListener("keydown", function (e) {
     }
 });
 
-document.addEventListener("touchstart", function () {
-    restartGame();
-});
+// document.addEventListener("touchstart", function () {
+//     restartGame();
+// });
 
 // Add an event listener for back button press
 window.onpopstate = function (event) {
@@ -309,3 +309,40 @@ window.onpopstate = function (event) {
 function goBack() {
     history.pushState({ pageTitle: "gamePage" }, "Game Page", "");
 }
+
+
+// Get the arrow buttons
+const topBtn = document.querySelector('.top-btn');
+const rightBtn = document.querySelector('.right-btn');
+const leftBtn = document.querySelector('.left-btn');
+const bottomBtn = document.querySelector('.bottom-btn');
+
+// Add click event listeners to the buttons
+topBtn.addEventListener('click', function() {
+    if(move !== "down") {
+        move = "top";
+        up.play();
+    }
+});
+
+rightBtn.addEventListener('click', function() {
+    if(move !== "left") {
+        move = "right";
+        right.play();
+    }
+});
+
+leftBtn.addEventListener('click', function() {
+    if(move !== "right") {
+        move = "left";
+        left.play();
+    }
+});
+
+bottomBtn.addEventListener('click', function() {
+    if(move !== "top") {
+        move = "down";
+        console.log(move)
+        down.play();
+    }
+});
